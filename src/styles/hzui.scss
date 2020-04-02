@@ -1,0 +1,39 @@
+.color-primary {
+  color: $color-primary !important;
+}
+
+.color-primary-dep {
+  color: $color-primary-dep !important;
+}
+
+.color-primary-dep-border {
+  border-color: $color-primary-dep !important;
+}
+
+.hz-button {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  background-color: #fff;
+  border-radius: 0;
+  &:active {
+    opacity: 0.7;
+  }
+  &::after {
+    border: none;
+  }
+  // 底部悬浮按钮
+  &.fixed-bottom {
+    z-index: 999;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100rpx;
+    line-height: 100rpx;
+    background-color: $color-primary;
+    color: rgba(255, 255, 255, 1);
+    font-size: 28rpx;
+    text-align: center;
+  }
+}

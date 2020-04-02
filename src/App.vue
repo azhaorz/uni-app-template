@@ -26,4 +26,5 @@ export default {
 /*每个页面公共css */
 @import "@/styles/reset.scss";
 @import "@/styles/common.scss";
+@import "@/styles/hzui.scss";
 </style>

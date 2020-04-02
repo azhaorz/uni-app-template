@@ -3,48 +3,52 @@
   display: flex;
 }
 
-.flex-c {
+.f-c {
   justify-content: center;
   align-items: center;
 }
 
-.flex-wrap {
+.f-wrap {
   flex-wrap: wrap;
 }
 
-.flex-column {
+.f-wrap-no {
+  flex-wrap: nowrap;
+}
+
+.f-dir-col {
   flex-direction: column;
 }
 
-.flex-vertical-center {
+.f-ver-c {
   align-items: center;
 }
 
-.flex-vertical-end {
+.f-ver-e {
   align-items: flex-end;
 }
 
-.flex-horizontal-center {
+.f-hor-c {
   justify-content: center;
 }
 
-.flex-horizontal-end {
+.f-hor-e {
   justify-content: flex-end;
 }
 
-.flex-horizontal-between {
+.f-hor-sb {
   justify-content: space-between;
 }
 
-.flex-horizontal-around {
+.f-hor-sa {
   justify-content: space-around;
 }
 
-.flex-shrink-0 {
+.f-shr-0 {
   flex-shrink: 0;
 }
 
-.flex-grow-1 {
+.f-gro-1 {
   flex-grow: 1;
 }
 // flex end
@@ -132,9 +136,15 @@
   .fz-#{$i} {
     font-size: $i * 2rpx;
   }
+  .fz-#{$i}-imp {
+    font-size: $i * 2rpx !important;
+  }
 }
 
 // width height begin
+.w-50p {
+  width: 50%;
+}
 .w-100p {
   width: 100%;
 }
@@ -204,6 +214,22 @@
 .col-9 {
   color: #999;
 }
+
+.col-95 {
+  color: #959595;
+}
+
+.col-7c {
+  color: #7c7c7c;
+}
+
+.col-10 {
+  color: #101010;
+}
+
+.col-b5 {
+  color: #b5b5b5;
+}
 // color end
 
 // border begin
@@ -213,31 +239,34 @@
 // border end
 
 .animation-up {
+  z-index: 0;
   transform: translateY(100%);
   transition: transform 250ms;
   &.active {
+    z-index: 999;
     transform: translateY(0);
   }
 }
 
-.fixed-bottom {
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0;
+.dp-b {
+  display: block;
 }
 
-.img {
-  vertical-align: top;
+.input-hidden {
+  width: 0;
+  height: 0;
+  opacity: 0;
 }
 
-.ell {
+// 单行省略
+.ell-1 {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
-.el-2 {
+// 第二行省略
+.ell-2 {
   display: -webkit-box;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -246,10 +275,19 @@
   -webkit-line-clamp: 2;
 }
 
-.bg-f {
+// 文本超出换行
+.line-feed {
+  text-align: justify;
+  text-justify: newspaper;
+  word-break: break-all;
+}
+
+// 背景色
+.bgc-f {
   background-color: #fff;
 }
 
+// 行高
 .lh-1 {
   line-height: 1;
 }

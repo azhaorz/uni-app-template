@@ -11,7 +11,9 @@ const config = {
     confirmColor: "#0077FF",
     // 取消按钮颜色
     cancelColor: "#333333"
-  }
+  },
+  //主色调
+  colorPrimary: "#129d7b"
 };
 
 if (process.env.NODE_ENV === "development") {

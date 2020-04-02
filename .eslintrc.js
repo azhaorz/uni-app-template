@@ -10,10 +10,13 @@ module.exports = {
   globals: {
     wx: true,
     uni: true,
-    getCurrentPages: true
+    getCurrentPages: true,
+    plus: true,
+    weex: true
   },
   rules: {
     "no-console": process.env.NODE_ENV === "production" ? "error" : "off",
-    "no-debugger": process.env.NODE_ENV === "production" ? "error" : "off"
+    "no-debugger": process.env.NODE_ENV === "production" ? "error" : "off",
+    "no-useless-escape": 0
   }
 };
