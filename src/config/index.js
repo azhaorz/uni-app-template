@@ -26,7 +26,7 @@ const config = {
       // 是否需要token认证
       isToken: true,
       // 需要跳转的登录地址
-      loginPath: ""
+      loginPath: "/pages/login/act-pwd"
     }
   }
 };
