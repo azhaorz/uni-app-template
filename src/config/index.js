@@ -13,7 +13,22 @@ const config = {
     cancelColor: "#333333"
   },
   //主色调
-  colorPrimary: "#129d7b"
+  colorPrimary: "#129d7b",
+  // 请求配置
+  request: {
+    header: {
+      "content-type": "application/x-www-form-urlencoded"
+    },
+    timeout: 10000,
+    custom: {
+      // loading类型
+      loadingType: "normal",
+      // 是否需要token认证
+      isToken: true,
+      // 需要跳转的登录地址
+      loginPath: ""
+    }
+  }
 };
 
 if (process.env.NODE_ENV === "development") {

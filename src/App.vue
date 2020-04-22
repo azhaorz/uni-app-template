@@ -1,12 +1,16 @@
 <script>
+import { mapActions } from "vuex";
+
 export default {
-  onLaunch: function() {
+  onLaunch() {
+    this.autoLogin();
+
     console.log("App Launch");
   },
-  onShow: function() {
+  onShow() {
     console.log("App Show");
   },
-  onHide: function() {
+  onHide() {
     console.log("App Hide");
   },
   onError(e) {
@@ -18,12 +22,26 @@ export default {
       this.$tip.double(e, "异常");
     }
     // console.log("App Error", e);
+  },
+  onUnhandledRejection(e) {
+    console.log(e);
+  },
+
+  methods: {
+    ...mapActions("user", ["getToken"]),
+    /**
+     * 自动登录
+     */
+    async autoLogin() {
+      this.getToken();
+      // const token = await this.getToken();
+      // if (token) uni.redirectTo({ url: "/pages/example/index" });
+    }
   }
 };
 </script>
 
 <style lang="scss">
-/*每个页面公共css */
 @import "@/styles/reset.scss";
 @import "@/styles/common.scss";
 @import "@/styles/hzui.scss";

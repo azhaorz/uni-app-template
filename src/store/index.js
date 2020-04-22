@@ -6,13 +6,15 @@ import actions from "./global/actions";
 import mutations from "./global/mutations";
 
 import example from "./modules/example";
+import user from "./modules/user";
 
 Vue.use(Vuex);
 
 const store = new Vuex.Store({
   plugins: [logger],
   modules: {
-    example
+    example,
+    user
   },
   state,
   actions,

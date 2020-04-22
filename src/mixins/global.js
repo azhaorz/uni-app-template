@@ -9,7 +9,7 @@ Vue.mixin({
   data() {
     return {
       // 主色
-      ColorPrimary: config.colorPrimary
+      _colorPrimary: config.colorPrimary
     };
   },
   methods: {

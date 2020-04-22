@@ -1,5 +1,5 @@
 // flex begin
-.flex {
+.dp-f {
   display: flex;
 }
 
@@ -20,27 +20,27 @@
   flex-direction: column;
 }
 
-.f-ver-c {
+.f-y-c {
   align-items: center;
 }
 
-.f-ver-e {
+.f-y-e {
   align-items: flex-end;
 }
 
-.f-hor-c {
+.f-x-c {
   justify-content: center;
 }
 
-.f-hor-e {
+.f-x-e {
   justify-content: flex-end;
 }
 
-.f-hor-sb {
+.f-x-sb {
   justify-content: space-between;
 }
 
-.f-hor-sa {
+.f-x-sa {
   justify-content: space-around;
 }
 
@@ -74,12 +74,12 @@
     margin-bottom: $i * 2rpx;
   }
 
-  .mar-hor-#{$i} {
+  .mar-x-#{$i} {
     margin-left: $i * 2rpx;
     margin-right: $i * 2rpx;
   }
 
-  .mar-ver-#{$i} {
+  .mar-y-#{$i} {
     margin-top: $i * 2rpx;
     margin-bottom: $i * 2rpx;
   }
@@ -104,12 +104,12 @@
     padding-bottom: $i * 2rpx;
   }
 
-  .pad-hor-#{$i} {
+  .pad-x-#{$i} {
     padding-left: $i * 2rpx;
     padding-right: $i * 2rpx;
   }
 
-  .pad-ver-#{$i} {
+  .pad-y-#{$i} {
     padding-top: $i * 2rpx;
     padding-bottom: $i * 2rpx;
   }
@@ -164,6 +164,9 @@
 }
 
 // text begin
+.ta-l {
+  text-align: left;
+}
 .ta-c {
   text-align: center;
 }
@@ -238,16 +241,6 @@
 }
 // border end
 
-.animation-up {
-  z-index: 0;
-  transform: translateY(100%);
-  transition: transform 250ms;
-  &.active {
-    z-index: 999;
-    transform: translateY(0);
-  }
-}
-
 .dp-b {
   display: block;
 }
@@ -258,14 +251,22 @@
   opacity: 0;
 }
 
-// 单行省略
-.ell-1 {
+
+// vertical-align
+.va-t {
+  vertical-align: top;
+}
+
+.va-m {
+  vertical-align: middle;
+}
+
+.ell {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
-// 第二行省略
 .ell-2 {
   display: -webkit-box;
   overflow: hidden;
@@ -282,12 +283,14 @@
   word-break: break-all;
 }
 
-// 背景色
 .bgc-f {
   background-color: #fff;
 }
 
-// 行高
+.bgc-f8 {
+  background-color: #f8f8f8;
+}
+
 .lh-1 {
   line-height: 1;
 }
