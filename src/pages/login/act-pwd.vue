@@ -29,7 +29,7 @@
 </template>
 
 <script>
-import { apiActPwdLogin } from "@/service/login";
+import { apiActPwdLogin } from "@/services/login";
 import { mapActions } from "vuex";
 
 export default {
