@@ -1,3 +1,6 @@
+.pos-r {
+  position: relative;
+}
 // flex begin
 .dp-f {
   display: flex;
@@ -145,6 +148,7 @@
 .w-50p {
   width: 50%;
 }
+
 .w-100p {
   width: 100%;
 }
@@ -161,6 +165,9 @@
 
 .fw-b {
   font-weight: bold;
+}
+.fw-6 {
+  font-weight: 600;
 }
 
 // text begin
@@ -188,6 +195,10 @@
 
 .col-f {
   color: #fff;
+}
+
+.col-1 {
+  color: #111;
 }
 
 .col-3 {
@@ -276,6 +287,15 @@
   -webkit-line-clamp: 2;
 }
 
+.ell-3 {
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+
 // 文本超出换行
 .line-feed {
   text-align: justify;
@@ -291,6 +311,40 @@
   background-color: #f8f8f8;
 }
 
+.bgc-trans {
+  background-color: transparent;
+}
+
 .lh-1 {
   line-height: 1;
+}
+
+.click {
+  &:active {
+    opacity: 0.85;
+  }
+}
+
+.button-hover {
+  position: relative;
+  overflow: hidden;
+}
+
+.button-hover::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border-radius: 0;
+  background-color: rgba(255,255,255,.3);
+}
+
+.bb-ef {
+  border-bottom: 1px solid #efefef;
+}
+
+.bt-ef {
+  border-top: 1px solid #efefef;
 }

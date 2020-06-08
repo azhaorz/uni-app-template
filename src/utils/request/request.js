@@ -340,7 +340,11 @@ export default class Request {
         complete: response => {
           response.config = handleRe;
           if (typeof response.data === "string") {
-            response.data = JSON.parse(response.data);
+            try {
+              response.data = JSON.parse(response.data);
+            } catch (error) {
+              console.log(error);
+            }
           }
           if (this.validateStatus(response.statusCode)) {
             // 成功

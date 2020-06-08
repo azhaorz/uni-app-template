@@ -28,12 +28,26 @@ export default class Tip {
    * 弹出成功提示
    * @param {string} title  提示信息
    * @param {number} duration 关闭延时
-   * @param {string} icon 图标
    */
   static success(title, duration = 1500) {
     uni.showToast({
       title: title,
       icon: "success",
+      mask: true,
+      duration
+    });
+    return new Promise(resolve => setTimeout(resolve, duration));
+  }
+
+  /**
+   * 弹出成功提示
+   * @param {string} title  提示信息
+   * @param {number} duration 关闭延时
+   */
+  static warning(title, duration = 1500) {
+    uni.showToast({
+      title: title,
+      image: "./warning.png",
       mask: true,
       duration
     });

@@ -13,7 +13,7 @@ const config = {
     cancelColor: "#333333"
   },
   //主色调
-  colorPrimary: "#129d7b",
+  themeColor: "#129d7b",
   // 请求配置
   request: {
     header: {
@@ -24,7 +24,9 @@ const config = {
       // loading类型
       loadingType: "normal",
       // 是否需要token认证
-      isToken: true,
+      isAuth: true,
+      // 是否错误提示
+      isError: true,
       // 需要跳转的登录地址
       loginPath: "/pages/login/act-pwd"
     }

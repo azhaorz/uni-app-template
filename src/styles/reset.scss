@@ -1,17 +1,18 @@
-page {
-  min-height: 100%;
-  background-color: #F8F8F8;
-}
+// page {
+//   // min-height: 100%;
+//   // background-color: #F8F8F8;
+// }
 view {
   box-sizing: border-box;
 }
 
-// button {
-//   margin: 0;
-//   padding: 0;
-//   line-height: 1;
-//   background-color: #fff;
-//   &::after {
-//     border: none;
-//   }
-// }
+button {
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  line-height: 1;
+  border-radius: 0;
+  &::after {
+    border: none;
+  }
+}

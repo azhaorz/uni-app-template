@@ -1,13 +1,5 @@
-.color-primary {
-  color: $color-primary !important;
-}
-
-.color-primary-dep {
-  color: $color-primary-dep !important;
-}
-
-.color-primary-dep-border {
-  border-color: $color-primary-dep !important;
+.theme-color {
+  color: $theme-color !important;
 }
 
 // 清楚原生button样式
@@ -32,7 +24,7 @@
     bottom: 0;
     height: 100rpx;
     line-height: 100rpx;
-    background-color: $color-primary;
+    background-color: $theme-color;
     color: rgba(255, 255, 255, 1);
     font-size: 28rpx;
     text-align: center;

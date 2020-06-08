@@ -34,7 +34,7 @@ request.interceptor.request((config, cancel) => {
     }
   }
 
-  Tip.loading("", config.custom.loadingType);
+  config.custom.isLoading && Tip.loading("", config.custom.loadingType);
 
   // if (config.custom.auth) {
   //   config.header.token = 'token'
@@ -62,11 +62,11 @@ request.interceptor.response(
     /* 成功拦截 */
     const {
       config: {
-        custom: { loadingType, loginPath }
+        custom: { loadingType, loginPath, isLoading, isError }
       },
       data: { code, msg }
     } = response;
-    Tip.loaded(loadingType);
+    isLoading && Tip.loaded(loadingType);
 
     // 与token相关错误
     if (code === -1) {
@@ -80,7 +80,7 @@ request.interceptor.response(
 
     // 错误相关
     if (code !== 0) {
-      Tip.single(msg);
+      isError && Tip.single(msg);
       return Promise.reject(response.data);
     }
 
@@ -92,10 +92,10 @@ request.interceptor.response(
       statusCode,
       config: {
         url,
-        custom: { loadingType }
+        custom: { loadingType, isLoading }
       }
     } = response;
-    Tip.loaded(loadingType);
+    isLoading && Tip.loaded(loadingType);
 
     if (statusCode !== 200) {
       Tip.single(`${url}: ${status[statusCode]}`, `${statusCode}`);
