@@ -8,10 +8,10 @@ import config from "@/config";
 Vue.mixin({
   data() {
     return {
-      // 主色
-      _colorPrimary: config.colorPrimary,
+      // 主题色
+      _themeColor: config.themeColor,
       // 未加载时暂时的图片
-      _previewImg: "/static/icon/preview.png"
+      _previewImg: "/static/images/preview.png"
     };
   },
   methods: {
